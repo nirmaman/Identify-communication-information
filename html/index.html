@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <title>Pipl</title>
+    <meta http-equiv="content-type" content="text/html;charset=Windows-1252">
+    <!-- load jquery via CDN -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <!-- connect to ajax -->
+     <script src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.4.js" type="text/javascript"></script>
+    <!-- load our CSS file -->
+     <link href="../public/indexCss.css" rel="stylesheet" /> 
+    <!-- load our javascript file -->
+    <script src="../js/indexJs.js" type="text/javascript"></script>
+    <link href='https://fonts.googleapis.com/css?family=Rubik:700&display=swap'> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"
+    integrity="sha512-DNeDhsl+FWnx5B1EQzsayHMyP6Xl/Mg+vcnFPXGNjUZrW28hQaa1+A4qL9M+AiOMmkAhKAWYHh1a+t6qxthzUw=="
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
+    integrity="sha512-yye/u0ehQsrVrfSd6biT17t39Rg9kNc+vENcCXZuMz2a+LWFGvXUnYuWUW6pbfYj1jcBb/C39UZw2ciQvwDDvg=="
+    crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    integrity="sha512-BNZ1x39RMH+UYylOW419beaGO0wqdSkO7pi1rYDYco9OL3uvXaC/GTqA5O4CVK2j4K9ZkoDNSSHVkEQKkgwdiw=="
+    crossorigin="anonymous"></script>
+    
+  </head>
+
+<body onload="offBtn()">
+  <div class="simple">
+    <form >
+    <h2>simple search</h2>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" style="width: 200px;" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email" onkeyup = "valdidatesimple()" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">phone</label>
+      <input type="number" style="width: 200px;" class="form-control" id="exampleInputphone" placeholder="Phone: +972..." onkeyup = "valdidatesimple()" required>
+    </div>
+    
+    <button type="button" onclick = "submitSimple1()" id="submitSimple" class="btn btn-primary">Submit</button>
+<div id="resultSimple"></div>
+  </form>
+</div>
+<div class="advanced" id = "advanced">
+  <form>
+    <h2>advanced search</h2>
+    <div class="form-group">
+      <label for="exampleInputEmail2">Email address</label>
+      <input type="email" style="width: 200px;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" onkeyup = "valdidateAdvanced()" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword2">phone</label>
+      <input type="number" style="width: 200px;" class="form-control" id="exampleInputphone1" placeholder="Phone: +972..." onkeyup = "valdidateAdvanced()" required>
+    </div>
+    <div class="advancedAdd" id ="advancedAdd"></div>
+    <button type="button" onclick="submitAdvanced1()" id= "submitAdvanced" class="btn btn-primary" >Submit</button>
+    <button type="button" id= "add" class="btn btn-primary" onclick="addBtn()">Add</button>
+    
+    <div id="resultAdvanced"></div>
+  </form>
+</div>
+</body>
+ 
+</html>
